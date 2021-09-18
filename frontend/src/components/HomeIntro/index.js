@@ -18,7 +18,7 @@ const HomeIntro = () => {
     useEffect(() => {
         //api call here
         axios
-            .get('http://localhost:3000/students/')
+            .get('http://34.132.48.95/students/')
             .then(function (response) {
 
                 console.log(response.data);
@@ -37,7 +37,7 @@ const HomeIntro = () => {
         const newStudent = {studentId, firstname, lastname, email, address, gpa}
         console.log(newStudent);
 
-        axios.post('http://localhost:3000/students/', newStudent)
+        axios.post('http://34.132.48.95/students/', newStudent)
         .then((response)=>{
             
             console.log(response);
@@ -53,7 +53,7 @@ const HomeIntro = () => {
 
     const handleSearch=(e)=>{
         console.log("I am here");
-        axios.get(`http://localhost:3000/students/${searchTerm}`)
+        axios.get(`http://34.132.48.95/students/${searchTerm}`)
         .then((response) => {
             console.log(response);
             setSearchedStudents(response.data);
